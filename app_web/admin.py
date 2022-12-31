@@ -1,3 +1,4 @@
 from django.contrib import admin
+from app_web.models import Testtable
 
-# Register your models here.
+admin.site.register(Testtable)
