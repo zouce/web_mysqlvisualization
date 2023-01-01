@@ -7,11 +7,17 @@ from django.core import serializers
 from django.db import connection
 import json, time, os, datetime
 import pandas as pd
+from app_web.views.q import loaddata
 
 class Query(APIView):
     permission_classes = ([IsAuthenticated])
     def post(self, request):
         user_id = request.user.id
+        '''
+        if(user_id == 1):
+            loaddata()
+            return Response({'query_id':10,'query_content':[],'query_content_title':[]})
+        '''
         data = request.POST
         code = str(data['code'])
         code = code.lower()

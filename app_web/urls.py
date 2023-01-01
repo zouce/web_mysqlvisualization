@@ -20,6 +20,5 @@ urlpatterns = [
     path('getinfo/',GetInfo.as_view(), name="getinfo"),
     path('query/',Query.as_view(), name="query"),
     path('getquery/',GetQuery.as_view(), name="getquery"),
-    path('loaddata/',loaddata),
     re_path(r".*",index,name="index"),
 ]

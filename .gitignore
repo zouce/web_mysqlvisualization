@@ -2,3 +2,4 @@
 *.swp
 *.sqlite3
 *.json
+db.sqlite3-journal
