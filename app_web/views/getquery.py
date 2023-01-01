@@ -24,7 +24,7 @@ class GetQuery(APIView):
             else:
                 query_record = Record.objects.filter(userid=user_id).order_by('-time')
             for query in query_record:
-                query_content.append({'id':query.id,'username':User.objects.filter(id=user_id)[0].username, 'time':query.time.strftime("%Y-%m-%d %H:%M:%S")})
+                query_content.append({'id':query.id,'username':User.objects.filter(id=query.userid)[0].username, 'time':query.time.strftime("%Y-%m-%d %H:%M:%S")})
             res = {'query_content':query_content,'query_content_title':query_content_title}
         else:
             fileurl = '/home/zouce/web_mysqlvisualization/app_web/static/file/json' + str(query_id) + '.json'

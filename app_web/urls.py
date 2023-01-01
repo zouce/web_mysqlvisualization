@@ -5,6 +5,7 @@ from app_web.views.test import test
 from app_web.views.query import Query
 from app_web.views.getquery import GetQuery
 from app_web.views.index import index
+from app_web.views.q import loaddata
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -19,5 +20,6 @@ urlpatterns = [
     path('getinfo/',GetInfo.as_view(), name="getinfo"),
     path('query/',Query.as_view(), name="query"),
     path('getquery/',GetQuery.as_view(), name="getquery"),
+    path('loaddata/',loaddata),
     re_path(r".*",index,name="index"),
 ]
