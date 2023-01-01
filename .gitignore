@@ -1,2 +1,4 @@
 **/__pycache__
 *.swp
+*.sqlite3
+*.json
